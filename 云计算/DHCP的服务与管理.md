@@ -20,4 +20,4 @@ BOOTPROTO=static 注意，若将本机作为DHCP服务器，这里选择静态�
 
 3：修改DHCP配置文件，代码如下。![DHCP.png](1)
 
-4：启动DHCP服务
+4：启动DHCP服务并设置开机自启，查看服务状态
