@@ -19,3 +19,5 @@ ifcfg-ens33是本次实验网卡，我们vim 进入网卡
 BOOTPROTO=static 注意，若将本机作为DHCP服务器，这里选择静态地址，client的BOOTPROTO=dhcp
 
 3：修改DHCP配置文件，代码如下。![DHCP.png](1)
+
+4：启动DHCP服务
