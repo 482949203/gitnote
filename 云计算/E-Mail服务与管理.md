@@ -18,7 +18,8 @@
 		5.启动dovecot服务程序；
 
 实战案例——E-Mail服务域管理笔记：
-	环境：双节点规划，节点Mail服务器 IP地址：192.168.200.155 	节点DNS服务器，IP地址：192.168.200.156
+
+环境：双节点规划，节点Mail服务器 IP地址：192.168.200.155 	节点DNS服务器，IP地址：192.168.200.156
 双节点关闭防火墙：[root@localhost named]# setenforce 0	[root@localhost named]# systemctl stop firewalld
 
 1：基础配置——Mail节点
@@ -31,7 +32,7 @@
 
 修改：listen-on port 53 { 127.0.0.1; };——改为listen-on port 53 { any; };
           allow-query     { localhost; };——改为allow-query     { any; };
-         bindkeys-file "/etc/named.root.key";——改为bindkeys-file "/etc/named.iscdlv.key";
+          bindkeys-file "/etc/named.root.key";——改为bindkeys-file "/etc/named.iscdlv.key";
 添加：//添加代码实现正反向解析
 zone "testmail.com" IN {
         type master;
