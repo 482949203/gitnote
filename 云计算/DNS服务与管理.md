@@ -5,7 +5,7 @@
 
 2：关闭防火墙
 
-3：[root@localhost ~]# yum install -y bind-chroot bind-utils						//安装，配置BIND（两个节点）
+3：  [root@localhost ~]# yum install -y bind-chroot bind-utils						//安装，配置BIND（两个节点）
      [root@localhost ~]# rpm -ql bind-chroot								//查询是否安装正确
      [root@localhost ~]# cd /var/named/chroot/								//进入bind-chroot目录
 
@@ -64,7 +64,7 @@ ftp    IN A        192.168.100.220
 
 [root@localhost named]# systemctl enable named-chroot 						//设置bind-chroot服务开机启动，并重启
 
-root@localhost named]#ln -s '/usr/lib/systemd/system/named-chroot.service' '/etc/systemd/system/multi-user.target.wants/named-chroot.service'			//注意，如果输入这段命令出现下面的报错提示的话不要鸟它
+root@localhost named]#ln -s '/usr/lib/systemd/system/named-chroot.service' '/etc/systemd/system/multi-user.target.wants/named-chroot.service'								//注意，如果输入这段命令出现下面的报错提示的话不要鸟它
 报错提示——ln: failed to create symbolic link ‘/etc/systemd/system/multi-user.target.wants/named-chroot.service’: File exists
 
 还有一种是[root@localhost ~]# systemctl enable named-chroot ln -s '/usr/lib/systemd/system/named-chroot.service' '/etc/systemd/system/multi-user.target.wants/named-chroot.service'  	//如果这样输入也报错的话也别鸟它。
