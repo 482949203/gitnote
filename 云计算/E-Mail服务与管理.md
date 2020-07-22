@@ -105,15 +105,15 @@ nameserver 192.168.200.156			//添加或修改为自己DNS服务器的IP地址�
 配置postfix
 [root@mail ~]# vim /etc/postfix/main.cf
  	
-#修改邮局主机名				myhostname = mail.zhongdianjizhi.com
-#修改邮局域名				mydomain = zhongdianjizhi.com
-#寄出邮件域名，删除注释			myorigin = $mydomain
+#修改邮局主机名					myhostname = mail.zhongdianjizhi.com
+#修改邮局域名					mydomain = zhongdianjizhi.com
+#寄出邮件域名，删除注释				myorigin = $mydomain
 #修改监听所有网卡，删除注释			inet_interfaces = all
 #修改可接邮件的主机名和域名、可被中继得到域名	mydestination = $myhostnamed,localhost,$mydoamin,localhost,$mydomian
 #修改可接收邮件的主机名和域名，可被中继的主机	mynetworks = 192.168.118.0/24, 127.0.0.0/8
 #取消注释					home_mailbox = Maildir/
 #指定信任网段类型				mynetworks_style = host
-#指定允许中转邮件的域名，取消注释		realy_domains = $mydestination
+#指定允许中转邮件的域名，取消注释			realy_domains = $mydestination
 
 添加权限，设置开机启动并重启服务
 [root@mail ~]# chown postfix.postfix -R /var/lib/postfix/

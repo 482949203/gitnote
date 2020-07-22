@@ -6,8 +6,8 @@
 2：关闭防火墙
 
 3：[root@localhost ~]# yum install -y bind-chroot bind-utils						//安装，配置BIND（两个节点）
-     [root@localhost ~]# rpm -ql bind-chroot							//查询是否安装正确
-     [root@localhost ~]# cd /var/named/chroot/							//进入bind-chroot目录
+     [root@localhost ~]# rpm -ql bind-chroot								//查询是否安装正确
+     [root@localhost ~]# cd /var/named/chroot/								//进入bind-chroot目录
 
 4：复制相关文件，准备bind-chroot环境
      [root@localhost chroot]# cp -R /usr/share/doc/bind-9.11.4/sample/etc/* /var/named/chroot/etc/
@@ -16,12 +16,12 @@
 5：创建dynamic目录，将相关文件设置为可写
      [root@localhost chroot]# cd var/named/
      [root@localhost named]# chmod -R 777 /var/named/chroot/var/named/data/
-     [root@localhost named]# mkdir dynamic							//这里注意，如果当下目录有dynamic，则输入命令会失败，需要去到 /var/named/chroot/var/named 下面创建dynamic
+     [root@localhost named]# mkdir dynamic								//这里注意，如果当下目录有dynamic，则输入命令会失败，需要去到 /var/named/chroot/var/named 下面创建dynamic
      [root@localhost named]# chmod 777 /var/named/chroot/var/named/dynamic/		
 
 6：[root@localhost chroot]# cp /etc/named.conf  /var/named/chroot/etc/named.conf 			//将named.conf文件复制到bind-chroot目录中，如果进入目录发现与图片不符合，需要重新复制，也就是再输入以下这个命令，并且覆盖 yes
 
-7：编辑named.conf文件，代码如下	#这里需要修改和添加的地方，我为大家列了出来 			//第7步尤其坑爹
+7：编辑named.conf文件，代码如下	#这里需要修改和添加的地方，我为大家列了出来 				//第7步尤其坑爹
 修改：options下的——listen-on port 53 {localhost;}; 改为 listen-on port {any;};
           options下的——allow-query{###这里面放的啥我忘了；} 改为allow-query{any;};
           bindkeys-file "/etc/named.root.key";改为 bindkeys-file "/etc/named.iscdlv.key";
@@ -54,7 +54,7 @@ ftp    IN A        192.168.100.220
 [root@localhost named]# chmod 777 test.com.zon							//赋予test.com.zone所有权限
 
 10：检查配置
-[root@localhost named]# named-checkconf /var/named/chroot/etc/named.conf 				//无返回结果则配置正确
+[root@localhost named]# named-checkconf /var/named/chroot/etc/named.conf 			//无返回结果则配置正确
 [root@localhost named]# named-checkzone test.com test.com.zon 					//返回结果zone test.com/IN: loaded serial 2019001  OK
 
 11：配置服务
@@ -71,9 +71,9 @@ root@localhost named]#ln -s '/usr/lib/systemd/system/named-chroot.service' '/etc
 
 [root@localhost ~]# cd /etc/systemd/system/multi-user.target.wants/ 	#只要保证在这个文件下，有named-chroot.service这个东西就行	
 
-[root@localhost ~]# systemctl restart named-chroot //重启named-chroot服务
+[root@localhost ~]# systemctl restart named-chroot 	//重启named-chroot服务
 #如果报错，使用下面方法
-[root@localhost ~]# vi /etc/sysconfig/named 	//进入这个配置文件
+[root@localhost ~]# vi /etc/sysconfig/named 		//进入这个配置文件
 DISABLE_ZONE_CHECKING= "yes"		#在下面加上这句
 然后重启服务即可
 
