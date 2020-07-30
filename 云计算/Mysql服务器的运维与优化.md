@@ -12,3 +12,5 @@
 	Reload privilege tables now? [Y/n] y
 
 2：配置数据库
+[root@localhost ~]# mysqladmin -uroot -p000000 create test	//创建一个名为 “test” 的数据库
+[root@localhost ~]# mysql -uroot -p000000			//进入数据库
