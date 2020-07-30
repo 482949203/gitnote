@@ -8,4 +8,7 @@
 	Set root password? [Y/n] y
 	Remove anonymous users? [Y/n] y
 	Disallow root login remotely? [Y/n] n
-	
+	Remove test database and access to it? [Y/n] y
+	Reload privilege tables now? [Y/n] y
+
+2：配置数据库
