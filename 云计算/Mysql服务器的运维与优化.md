@@ -18,5 +18,9 @@ MariaDB [test]>	 use test;
 MariaDB [test]>  CREATE TABLE IF NOT EXISTS `tables`(`tables_id` INT UNSIGNED AUTO_INCREMENT, `tables_title` VARCHAR(100) NOT NULL, `tables_author` VARCHAR(40) NOT NULL,`tables_data` DATE, PRIMARY KEY (`tables_id`)) ENGINE=INNODB DEFAULT CHARSET=utf8;
 
 3：数据库备份
+[root@localhost ~]# mysqldump -uroot -p000000 test > test.sql	//导出整个数据表
+[root@localhost ~]# ls		#可以看到/root/目录下 有一个test.sql
+anaconda-ks.cfg  CentOS-7-x86_64-DVD-2003.iso  PXE.sh  test.sql
+#到处一个表，命令如下
 
 
