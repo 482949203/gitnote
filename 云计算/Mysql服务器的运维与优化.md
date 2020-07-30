@@ -36,3 +36,6 @@ Any data stored in the database will be destroyed.
 Do you really want to drop the 'test' database [y/N] y
 Database "test" dropped
 
+[root@localhost ~]# mysql -uroot -p000000		
+
+MariaDB [(none)]> create database test;				//因为我们drop 了test
