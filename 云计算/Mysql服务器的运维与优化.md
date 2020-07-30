@@ -15,4 +15,4 @@
 [root@localhost ~]# mysqladmin -uroot -p000000 create test	//创建一个名为 “test” 的数据库
 [root@localhost ~]# mysql -uroot -p000000			//进入数据库
 
-MariaDB [test]> CREATE TABLE IF NOT EXISTS 'tables'('tables_id' INT UNSIGNED AUTO_INCREMENT, 'tables_title' VARCHAR(100) NOT NULL, 'tables_author' VARCHAR(40) NOT NULL, 'tables_data' DATE, PRIMARY KEY ('tables_id')) ENGINE=InnoDB DEFAUTL CHARSET=utf8;
+MariaDB [test]> CREATE TABLE IF NOT EXISTS 'tables'('tables_id' INT UNSIGNED AUTO_INCREMENT, 'tables_title' VARCHAR(100) NOT NULL COMMENT, 'tables_author' VARCHAR(40) NOT NULL COMMENT, 'tables_data' DATE, PRIMARY KEY ('tables_id')) ENGINE=InnoDB DEFAUTL CHARSET=utf8;
