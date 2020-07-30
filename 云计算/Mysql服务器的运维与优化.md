@@ -22,5 +22,9 @@ MariaDB [test]>  CREATE TABLE IF NOT EXISTS `tables`(`tables_id` INT UNSIGNED AU
 [root@localhost ~]# ls		#可以看到/root/目录下 有一个test.sql
 anaconda-ks.cfg  CentOS-7-x86_64-DVD-2003.iso  PXE.sh  test.sql
 #到处一个表，命令如下
+[root@localhost ~]# mysqldump -uroot -p000000 test tables > test_tables.sql
+[root@localhost ~]# ls
+anaconda-ks.cfg  CentOS-7-x86_64-DVD-2003.iso  PXE.sh  test.sql  test_tables.sql
 
+删除test数据库，进行导入测试，
 
