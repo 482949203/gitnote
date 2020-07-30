@@ -54,3 +54,4 @@ anaconda-ks.cfg  CentOS-7-x86_64-DVD-2003.iso  PXE.sh  test.sql  test_tables.sql
 	MariaDB [test]> source /root/test.sql
 
 4：添加用户并授权
+MariaDB [(none)]> GRANT ALL PRIVILEGES ON test. * TO 'root'@'%' IDENTIFIED BY '000000';
