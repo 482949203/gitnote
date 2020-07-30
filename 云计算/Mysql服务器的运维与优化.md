@@ -61,7 +61,7 @@ MariaDB [(none)]> GRANT ALL PRIVILEGES ON test. * TO 'root'@'localhost' IDENTIFI
 MariaDB [(none)]> GRANT SELECT,INSERT,DELETE,UPDATE ON test. * TO 'root'@'%' IDENTIFIED BY '000000';
 
 5：数据库优化
-[root@localhost ~]# vi /etc/my.cnf	
+[root@localhost ~]# vi /etc/my.cnf	//进入配置文件
 thread_concurrency = 64
 max_connections = 1500
 max_connect_errors = 30
@@ -71,3 +71,4 @@ query_cche_size =  64M
 max_allowed_packet = 128M
 read_buffer_size = 8M
 read_rnd_buffer_size = 32M
+#为大家附上命令解析
