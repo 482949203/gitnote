@@ -58,4 +58,7 @@ anaconda-ks.cfg  CentOS-7-x86_64-DVD-2003.iso  PXE.sh  test.sql  test_tables.sql
 MariaDB [(none)]> GRANT ALL PRIVILEGES ON test. * TO 'root'@'%' IDENTIFIED BY '000000';
 MariaDB [(none)]> GRANT ALL PRIVILEGES ON test. * TO 'root'@'localhost' IDENTIFIED BY '000000';
 #添加root用户对test数据库增、删、改、查的权限
+MariaDB [(none)]> GRANT SELECT,INSERT,DELETE,UPDATE ON test. * TO 'root'@'%' IDENTIFIED BY '000000';
+
+5：数据库优化
 
