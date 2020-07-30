@@ -50,6 +50,8 @@ anaconda-ks.cfg  CentOS-7-x86_64-DVD-2003.iso  PXE.sh  test.sql  test_tables.sql
 	Database "test" dropped
 	[root@localhost ~]# mysql -uroot -p000000	
 	MariaDB [(none)]> create database test;
-MariaDB [test]> use test 
-Database changed
-MariaDB [test]> source /root/test.sql
+	MariaDB [test]> use test 
+	Database changed
+	MariaDB [test]> source /root/test.sql
+
+4：添加用户并授权
