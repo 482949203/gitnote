@@ -42,5 +42,14 @@ anaconda-ks.cfg  CentOS-7-x86_64-DVD-2003.iso  PXE.sh  test.sql  test_tables.sql
 	[root@localhost ~]# mysql -uroot -p000000 test < test.sql	//恢复到指定的数据库
 
 第二种方法：
-	
-	
+	[root@localhost ~]# mysqladmin -uroot -p000000 drop test
+	Dropping the database is potentially a very bad thing to do.
+	Any data stored in the database will be destroyed.
+
+	Do you really want to drop the 'test' database [y/N] y
+	Database "test" dropped
+	[root@localhost ~]# mysql -uroot -p000000	
+	MariaDB [(none)]> create database test;
+MariaDB [test]> use test 
+Database changed
+MariaDB [test]> source /root/test.sql
