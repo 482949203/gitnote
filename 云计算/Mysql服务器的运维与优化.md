@@ -11,9 +11,12 @@
 	Remove test database and access to it? [Y/n] y
 	Reload privilege tables now? [Y/n] y
 
-2：配置数据库
+2：创建数据表
 [root@localhost ~]# mysqladmin -uroot -p000000 create test	//创建一个名为 “test” 的数据库
 [root@localhost ~]# mysql -uroot -p000000			//进入数据库
 MariaDB [test]>	 use test;
 MariaDB [test]>  CREATE TABLE IF NOT EXISTS `tables`(`tables_id` INT UNSIGNED AUTO_INCREMENT, `tables_title` VARCHAR(100) NOT NULL, `tables_author` VARCHAR(40) NOT NULL,`tables_data` DATE, PRIMARY KEY (`tables_id`)) ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+3：数据库备份
+
 
