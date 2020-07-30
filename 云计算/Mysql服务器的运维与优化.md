@@ -29,13 +29,18 @@ anaconda-ks.cfg  CentOS-7-x86_64-DVD-2003.iso  PXE.sh  test.sql  test_tables.sql
 删除test数据库，进行导入测试，用 mysqldump 备份的文件是一个可以直接导入的SQL脚本。
 有两种方法可以将数据库导入，一种是 msql 命令，把数据库文件恢复到指定的数据库，命令如下：
 
-[root@localhost ~]# mysqladmin -uroot -p000000 drop test
-Dropping the database is potentially a very bad thing to do.
-Any data stored in the database will be destroyed.
+第一种方法：
+	[root@localhost ~]# mysqladmin -uroot -p000000 drop test
+	Dropping the database is potentially a very bad thing to do.
+	Any data stored in the database will be destroyed.
 
-Do you really want to drop the 'test' database [y/N] y
-Database "test" dropped
+	Do you really want to drop the 'test' database [y/N] y
+	Database "test" dropped
 
-[root@localhost ~]# mysql -uroot -p000000		
-MariaDB [(none)]> create database test;				//因为我们drop 了 test 数据库它也就不在了，需要再创建一个
-[root@localhost ~]# mysql -uroot -p000000 test < test.sql	//恢复到指定的数据库
+	[root@localhost ~]# mysql -uroot -p000000		
+	MariaDB [(none)]> create database test;				//因为我们drop 了 test 数据库它也就不在了，需要再创建一个
+	[root@localhost ~]# mysql -uroot -p000000 test < test.sql	//恢复到指定的数据库
+
+第二种方法：
+	
+	
