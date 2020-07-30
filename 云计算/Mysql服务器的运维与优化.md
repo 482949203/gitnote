@@ -26,5 +26,5 @@ anaconda-ks.cfg  CentOS-7-x86_64-DVD-2003.iso  PXE.sh  test.sql
 [root@localhost ~]# ls
 anaconda-ks.cfg  CentOS-7-x86_64-DVD-2003.iso  PXE.sh  test.sql  test_tables.sql
 
-删除test数据库，进行导入测试，
+删除test数据库，进行导入测试，用 mysqldump 备份的文件是一个可以直接导入的SQL脚本。有
 
