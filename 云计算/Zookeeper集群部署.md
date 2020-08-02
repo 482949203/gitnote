@@ -8,4 +8,6 @@
 
 1：基础环境配置
 #使用 sourceCRT 对3台linux主机进行连接。，将三个节点的主机名更改
-	
+	节点1：[root@localhost ~]# hostnamectl set-hostname zookeeper1
+	节点2：[root@localhost ~]# hostnamectl set-hostname zookeeper2
+	节点3：[root@localhost ~]# hostnamectl set-hostname zookeeper3
