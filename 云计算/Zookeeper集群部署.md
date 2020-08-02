@@ -24,4 +24,5 @@
 	[root@zookeeper1 ~]# yum install -y java-1.8.0-openjdk java-1.8.0-openjdk-devel
   
 	（2）解压缩包 zookeeper 软件包	#三个节点操作
+	将压缩包，使用sourceCRT上传至/root目录下，并解压
 	
