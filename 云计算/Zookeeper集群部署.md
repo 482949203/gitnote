@@ -11,3 +11,5 @@
 	节点1：[root@localhost ~]# hostnamectl set-hostname zookeeper1
 	节点2：[root@localhost ~]# hostnamectl set-hostname zookeeper2
 	节点3：[root@localhost ~]# hostnamectl set-hostname zookeeper3
+
+2
