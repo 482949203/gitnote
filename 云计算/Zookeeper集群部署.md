@@ -12,5 +12,10 @@
 	节点2：[root@localhost ~]# hostnamectl set-hostname zookeeper2
 	节点3：[root@localhost ~]# hostnamectl set-hostname zookeeper3
 
-2：配置 hosts 文件
-	
+2：配置 hosts 文件,三个节点配置
+	[root@zookeeper1 ~]# vi /etc/hosts
+	192.168.200.169 zookeeper1
+	192.168.200.170 zookeeper2
+	192.168.200.171 zookeeper3
+
+
