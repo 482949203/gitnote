@@ -84,4 +84,23 @@
 		Mode: follower
 		
 		#节点2
-		
+		[root@zookeeper2 bin]# ./zkServer.sh start
+		ZooKeeper JMX enabled by default
+		Using config: /root/zookeeper-3.4.14/bin/../conf/zoo.cfg
+		Starting zookeeper ... STARTED
+		[root@zookeeper2 bin]# ./zkServer.sh status
+		ZooKeeper JMX enabled by default
+		Using config: /root/zookeeper-3.4.14/bin/../conf/zoo.cfg
+		Mode: leader
+
+		#节点3
+		[root@zookeeper3 bin]# ./zkServer.sh start
+		ZooKeeper JMX enabled by default
+		Using config: /root/zookeeper-3.4.14/bin/../conf/zoo.cfg
+		Starting zookeeper ... STARTED
+		[root@zookeeper3 bin]# ./zkServer.sh status
+		ZooKeeper JMX enabled by default
+		Using config: /root/zookeeper-3.4.14/bin/../conf/zoo.cfg
+		Mode: follower
+
+总结：我们可以看到，最终是节点2 
