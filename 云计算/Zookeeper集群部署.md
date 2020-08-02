@@ -12,4 +12,5 @@
 	节点2：[root@localhost ~]# hostnamectl set-hostname zookeeper2
 	节点3：[root@localhost ~]# hostnamectl set-hostname zookeeper3
 
-2
+2：配置 hosts 文件
+	
