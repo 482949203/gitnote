@@ -18,4 +18,6 @@
 	192.168.200.170 zookeeper2
 	192.168.200.171 zookeeper3
 
+3：搭建 Zookeeper 集群
 
+（1）
