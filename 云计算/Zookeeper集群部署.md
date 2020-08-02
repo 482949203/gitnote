@@ -25,4 +25,7 @@
   
 	（2）解压缩包 zookeeper 软件包	#三个节点操作
 	将压缩包，使用sourceCRT上传至/root目录下，并解压
+	[root@zookeeper1 ~]# tar -zxvf zookeeper-3.4.14.tar.gz
+
+	（3）修改3个节点配置文件
 	
