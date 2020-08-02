@@ -31,13 +31,21 @@
 	[root@zookeeper1 conf]# mv zoo_sample.cfg zoo.cfg	//修改文件zoo_sample.cfg 名为 zoo.cfg
 	#修改配置如下
 	[root@zookeeper1 conf]# vi zoo.cfg			//进入配置文件
-	tickTime=2000
-	initLimit=10
-	syncLimit=5
-	dataDir=/tmp/zookeeper
-	clientPort=2181
-	server.1 = 192.168.200.169:2888:3888
-	server.2 = 192.168.200.170:2888:3888
-	server.3 = 192.168.200.171:2888:3888
-	
+		tickTime=2000
+		initLimit=10
+		syncLimit=5
+		dataDir=/tmp/zookeeper
+		clientPort=2181
+		server.1 = 192.168.200.169:2888:3888
+		server.2 = 192.168.200.170:2888:3888
+		server.3 = 192.168.200.171:2888:3888
+	[root@zookeeper1 conf]# grep -n '^'[a-Z] zoo.cfg 	//我们输入这条命令，只要显示结果如下，就代表配置正确，最后三条前面的序号
+		2:tickTime=2000
+		5:initLimit=10
+		8:syncLimit=5
+		12:dataDir=/tmp/zookeeper
+		14:clientPort=2181
+		15:server.1 = 192.168.200.169:2888:3888
+		16:server.2 = 192.168.200.170:2888:3888
+		17:server.3 = 192.168.200.171:2888:3888
 	
