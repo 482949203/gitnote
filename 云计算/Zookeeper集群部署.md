@@ -23,4 +23,5 @@
 	（1）安装 JDK 环境		#在三个节点安装 JDK 环境
 	[root@zookeeper1 ~]# yum install -y java-1.8.0-openjdk java-1.8.0-openjdk-devel
   
-	（2）解压缩包 zookeeper 软件包	#三个节点
+	（2）解压缩包 zookeeper 软件包	#三个节点操作
+	
