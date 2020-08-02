@@ -51,6 +51,10 @@
 	
 	（4）创建 myid 文件
 	#在三台linux dataDir 目录（此处为/tmp/zookeeper） 下分别创建一个 myid 文件，文件内容只有一行
-	 分别是1、2、3。即文件中只有一个数字，这个数字即 zoo.cfg 配置文件中指定的值。zookeeper 根据该文件
+	 分别是1、2、3。即文件中只有一个数字，这个数字即 zoo.cfg 配置文件中指定的值。zookeeper 根据该
+	 文件来决定 zookeeper 集群中各计算机的身份分配
+	
+	#创建 myid 文件命令如下：
+		
 	
 		
