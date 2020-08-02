@@ -73,4 +73,15 @@
 	
 	（5）启动 Zookeeper 服务
 	#在三台linux计算机的 zookeeper-3.4.14/bin 目录下执行如下命令：
+		#节点1
+		[root@zookeeper1 bin]# ./zkServer.sh start
+		ZooKeeper JMX enabled by default
+		Using config: /root/zookeeper-3.4.14/bin/../conf/zoo.cfg
+		Starting zookeeper ... already running as process 4894. 
+		[root@zookeeper1 bin]# ./zkServer.sh status
+		ZooKeeper JMX enabled by default
+		Using config: /root/zookeeper-3.4.14/bin/../conf/zoo.cfg
+		Mode: follower
+		
+		#节点2
 		
