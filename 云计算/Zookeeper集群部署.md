@@ -20,6 +20,7 @@
 
 3：搭建 Zookeeper 集群
 
- （1）安装 JDK 环境 #在三个节点安装 JDK 环境
+	（1）安装 JDK 环境		#在三个节点安装 JDK 环境
 	[root@zookeeper1 ~]# yum install -y java-1.8.0-openjdk java-1.8.0-openjdk-devel
   
+	（2）解压缩包 zookeeper 软件包	#三个节点
