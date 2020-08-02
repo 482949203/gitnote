@@ -71,4 +71,7 @@
 		[root@zookeeper1 ~]# cat /tmp/zookeeper/myid 
 		3
 	
+	（5）启动 Zookeeper 服务
+	#在三台linux计算机的 zookeeper-3.4.14/bin 目录下执行如下命令：
+		
 		
