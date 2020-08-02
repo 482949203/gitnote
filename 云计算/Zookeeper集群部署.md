@@ -103,4 +103,4 @@
 		Using config: /root/zookeeper-3.4.14/bin/../conf/zoo.cfg
 		Mode: follower
 
-总结：我们可以看到，最终是节点2 
+总结：我们可以看到，最终是节点2 mode：为leader 即节点2被选举，其他为follower。
