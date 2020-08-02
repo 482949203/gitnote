@@ -50,6 +50,6 @@
 		17:server.3 = 192.168.200.171:2888:3888
 	
 	（4）创建 myid 文件
-	#在三台linux 
+	#在三台linux dataDir 目录（此处为/tmp/zookeeper） 下分别创建一个 myid 文件，文件内容只有
 	
 		
