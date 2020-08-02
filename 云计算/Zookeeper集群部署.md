@@ -55,6 +55,9 @@
 	 文件来决定 zookeeper 集群中各计算机的身份分配
 	
 	#创建 myid 文件命令如下：
-		
+		[root@zookeeper1 ~]# mkdir /tmp/zookeeper
+		[root@zookeeper1 ~]# vi /tmp/zookeeper/myid
+[root@zookeeper1 ~]# cat /tmp/zookeeper/myid 
+1
 	
 		
