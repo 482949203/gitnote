@@ -7,4 +7,5 @@
 这里提供 zookeeper-3.4.14 压缩包下载地址：https://mirrors.tuna.tsinghua.edu.cn/apache/zookeeper/
 
 1：基础环境配置
-#使用 sourceCRT 对3台
+#使用 sourceCRT 对3台linux主机进行连接。，将三个节点的主机名更改
+	
