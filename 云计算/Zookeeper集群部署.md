@@ -28,4 +28,5 @@
 	[root@zookeeper1 ~]# tar -zxvf zookeeper-3.4.14.tar.gz
 
 	（3）修改3个节点配置文件
-	
+	[root@zookeeper1 conf]# mv zoo_sample.cfg zoo.cfg	//修改文件zoo_sample.cfg 名为 zoo.cfg
+	#修改配置文件
