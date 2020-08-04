@@ -20,4 +20,4 @@ broker.id=1
 zookeeper.connect=192.168.200.169:2181,192.168.200.170:2181,192.168.200.171:2181
 listeners = PLAINTEXT://192.168.200.169:9092
 
-#其他两个节点的配置都一样，但 broker.id 和
+#其他两个节点的配置都一样，但 broker.id 和 listeners 不能一样
