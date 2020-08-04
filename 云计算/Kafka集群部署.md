@@ -9,9 +9,9 @@
 1：解压缩 Kafka 软件包（3个节点操作）
 [root@zookeeper1 ~]# tar -zxvf kafka_2.11-1.1.1.gz	//解压到 /root下
 
-2：修改3个基点配置文件
+2：修改3个基点配置文件（3个节点操作）
 [root@zookeeper1 ~]# vi kafka_2.11-1.1.1/config/server.properties	//进入配置文件
 #找到下列两行，并注释掉
 broker.id=0
 zookeeper.connect=localhost:2181
-#然后
+#然后在配置文件的底部添加如下内容：
