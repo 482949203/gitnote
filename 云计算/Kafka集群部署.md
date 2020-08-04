@@ -30,4 +30,5 @@ listeners = PLAINTEXT://192.168.200.169:9092
 2007 Jps
 
 4：测试服务
+[root@zookeeper1 ~]# cd kafka_2.11-1.1.1/bin/				//进入目录
 
