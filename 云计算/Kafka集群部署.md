@@ -31,5 +31,8 @@ listeners = PLAINTEXT://192.168.200.169:9092
 
 4：测试服务
 [root@zookeeper1 ~]# cd kafka_2.11-1.1.1/bin/				//进入目录
-[root@zookeeper1 bin]# ./kafka-topics.sh --create --zookeeper 192.168.200.169 --replication-factor 1 --partitions 1 --topic test	//
-Created topic "test".
+[root@zookeeper1 bin]# ./kafka-topics.sh --create --zookeeper 192.168.200.169 --replication-factor 1 --partitions 1 --topic test	//创建 topic
+Created topic "test".	#这里成功才会显示
+
+5：查看topic
+#这里虽然 topic 是在 192.168.200.169
