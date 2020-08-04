@@ -6,4 +6,4 @@
 
 所需软件包：kafka_2.11-1.1.1.tgz		//这里提供下载地址：http://kafka.apache.org/downloads.html
 
-1：解压缩 Kafka 软件包,
+1：解压缩 Kafka 软件包（3个节点操作）
