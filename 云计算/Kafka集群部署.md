@@ -13,8 +13,11 @@
 [root@zookeeper1 ~]# vi kafka_2.11-1.1.1/config/server.properties	//进入配置文件
 #找到下列两行，并注释掉
 broker.id=0
-zookeeper.connect=localhost:2181					//注意，这里的listeners IP地址是 zookeeper1 的 IP地址
-#然后在配置文件的底部添加如下内容：					
+zookeeper.connect=localhost:2181					
+
+#然后在配置文件的底部添加如下内容：					////注意，这里的listeners IP地址是 zookeeper1 的 IP地址
 broker.id=1
 zookeeper.connect=192.168.200.169:2181,192.168.200.170:2181,192.168.200.171:2181
 listeners = PLAINTEXT://192.168.200.169:9092
+
+#其他两个节点的配置都一样，但 broker.id 和
