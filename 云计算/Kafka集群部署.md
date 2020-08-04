@@ -4,14 +4,17 @@
 	192.168.200.170		zookeeper2		集群节点
 	192.168.200.171		zookeeper3		集群节点
 
-所需软件包：kafka_2.11-1.1.1.tgz				//这里提供下载地址：http://kafka.apache.org/downloads.html
+所需软件包：kafka_2.11-1.1.1.tgz						//这里提供下载地址：http://kafka.apache.org/downloads.html
 
 1：解压缩 Kafka 软件包（3个节点操作）
-[root@zookeeper1 ~]# tar -zxvf kafka_2.11-1.1.1.gz	//解压到 /root下
+[root@zookeeper1 ~]# tar -zxvf kafka_2.11-1.1.1.gz			//解压到 /root下
 
 2：修改3个基点配置文件（3个节点操作）
 [root@zookeeper1 ~]# vi kafka_2.11-1.1.1/config/server.properties	//进入配置文件
 #找到下列两行，并注释掉
 broker.id=0
-zookeeper.connect=localhost:2181
-#然后在配置文件的底部添加如下内容：
+zookeeper.connect=localhost:2181					//注意，这里的listeners IP地址是 zookeeper1 的 IP地址
+#然后在配置文件的底部添加如下内容：					
+broker.id=1
+zookeeper.connect=192.168.200.169:2181,192.168.200.170:2181,192.168.200.171:2181
+listeners = PLAINTEXT://192.168.200.169:9092
