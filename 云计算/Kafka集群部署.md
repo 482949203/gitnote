@@ -24,7 +24,7 @@ listeners = PLAINTEXT://192.168.200.169:9092
 3：启动服务（3个节点操作）
 [root@zookeeper1 ~]# cd kafka_2.11-1.1.1/bin/				//进入目录
 [root@zookeeper1 bin]# ./kafka-server-start.sh -daemon ../config/server.properties 	//启动服务
-[root@zookeeper1 bin]# jps						//查看
+[root@zookeeper1 bin]# jps						//查看端口
 1569 QuorumPeerMain
 1938 Kafka
 2007 Jps
