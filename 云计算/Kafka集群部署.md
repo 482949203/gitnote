@@ -37,5 +37,6 @@ Created topic "test".	#这里成功才会显示
 5：查看topic
 #这里虽然 topic 是在 192.168.200.169 上创建的，但是在其他计算机上也能看到。
  例如，在任意启动的计算的 kafka_2.11-1.1.1/bin 目录中执行如下命令。
-[root@zookeeper2 bin]# ./kafka-topics.sh --list --zookeeper 192.168.200.170:2181	#我们可以看到，在192.168.200.169上创建的 topic会话，同步到了其他
+[root@zookeeper2 bin]# ./kafka-topics.sh --list --zookeeper 192.168.200.170:2181	#我们可以看到，在192.168.200.169上创建的 topic会话，同步到了其他服务器上
 test
+测试成功。
