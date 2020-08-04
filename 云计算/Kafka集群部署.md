@@ -10,3 +10,4 @@
 [root@zookeeper1 ~]# tar -zxvf kafka_2.11-1.1.1.gz	//解压到 /root下
 
 2：修改3个基点配置文件
+#zookeeper.connect=localhost:2181
