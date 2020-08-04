@@ -28,3 +28,6 @@ listeners = PLAINTEXT://192.168.200.169:9092
 1569 QuorumPeerMain
 1938 Kafka
 2007 Jps
+
+4：测试服务
+
